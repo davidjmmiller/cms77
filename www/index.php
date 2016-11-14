@@ -1,4 +1,5 @@
 <?php
 
-include ../core/loader.php
+include '../core/loader.php';
+
 

@@ -1,10 +1,10 @@
 <?php
 
 $global_config['db'] = array(
-	'host' => '127.0.0.1',
+	'host' => 'localhost',
 	'port' => '3306',
 	'user' => 'root',
-	'pass' => '',
+	'pass' => 'David88',
 	'name' => 'cms77'
 );
 
