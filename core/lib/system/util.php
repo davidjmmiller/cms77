@@ -5,10 +5,12 @@ function conf($sub, $varname, $value = NULL){
 	if (is_null($value) && isset($global_config[$sub][$varname])){
 		return $global_config[$sub][$varname];
 	}
+	if (!is_null($value)){
+		$global_config[$sub][$varname] = $value;
+	}
 	else {
 		return NULL;
 	}
-	$global_config[$sub][$varname] = $value;
 }
 
 function v($varname, $namespace = 'global', $value = NULL){
