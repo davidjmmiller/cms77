@@ -2,8 +2,11 @@
 
 function conf($sub, $varname, $value = NULL){
 	global $global_config;
-	if (is_null($value)){
+	if (is_null($value) && isset($global_config[$sub][$varname])){
 		return $global_config[$sub][$varname];
+	}
+	else {
+		return NULL;
 	}
 	$global_config[$sub][$varname] = $value;
 }
@@ -15,4 +18,3 @@ function v($varname, $namespace = 'global', $value = NULL){
 	}
 	$global_vars[$namespace][$varname] = $value;
 }
-
